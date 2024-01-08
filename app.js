@@ -1,6 +1,6 @@
 const express = require("express");
 const connectDB = require("./config/db");
-const routes = require("./routes/api/books");
+const routes = require("./routes/api/mangas");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // use the routes module as a middleware
 // for the /api/books path
-app.use("api/books", routes);
+app.use("api/mangas", routes);
 
 // Connect Database
 connectDB();
